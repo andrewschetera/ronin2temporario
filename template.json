@@ -1,0 +1,118 @@
+{
+  "Actor": {
+    "types": ["character"],
+    "templates": {
+      "base": {
+        "abilities": {
+          "vigor": {
+            "value": 0,
+            "min": -3,
+            "max": 6
+          },
+          "swiftness": {
+            "value": 0,
+            "min": -3,
+            "max": 6
+          },
+          "spirit": {
+            "value": 0,
+            "min": -3,
+            "max": 6
+          },
+          "resilience": {
+            "value": 0,
+            "min": -3,
+            "max": 6
+          }
+        },
+        "resources": {
+          "hp": {
+            "value": 0,
+            "max": 0
+          },
+          "texts": {
+            "value": 0
+          },
+          "virtues": {
+            "value": 0
+          },
+          "ryo": {
+            "value": 0
+          },
+          "honor": {
+            "value": 10
+          }
+        },
+        "background": "",
+        "carryingCapacity": {
+          "value": 0
+        }
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "class": "",
+      "biography": ""
+    }
+  },
+  "Item": {
+    "types": ["weapon", "armor", "gear", "ammo", "consumable", "feat", "text", "class"],
+    "templates": {
+      "itemDescription": {
+        "description": ""
+      },
+      "physicalItem": {
+        "price": 0,
+        "weight": "normal"
+      },
+      "itemQuantity": {
+        "quantity": 1
+      }
+    },
+    "weapon": {
+      "templates": ["itemDescription"],
+      "damage": "d6",
+      "weaponType": "melee",
+      "useAmmo": false,
+      "ammoId": null,
+      "hand": "one",
+      "price": 0,
+      "weight": "normal"
+    },
+    "armor": {
+      "templates": ["itemDescription", "physicalItem"],
+      "maxCategory": 1,
+      "currentCategory": 1,
+      "protection": "",
+      "swiftnessPenalty": 0,
+      "defensePenalty": 0
+    },
+    "gear": {
+      "templates": ["itemDescription", "physicalItem", "itemQuantity"]
+    },
+    "ammo": {
+      "templates": ["itemDescription", "physicalItem", "itemQuantity"],
+      "compatible": []
+    },
+    "consumable": {
+      "templates": ["itemDescription", "physicalItem", "itemQuantity"],
+      "uses": {
+        "value": 1,
+        "max": 1
+      },
+      "consumableType": "potion"
+    },
+    "feat": {
+      "templates": ["itemDescription"]
+    },
+    "text": {
+      "templates": ["itemDescription"],
+      "textType": "unseen",
+      "prepared": false
+    },
+    "class": {
+      "templates": ["itemDescription", "physicalItem"],
+      "quantity": 1
+    }
+  }
+}
